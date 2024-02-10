@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- boostraps start -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- owl.carousel.min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- owl.theme.default.min.css -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-sm  fixed-top nav_bg">
+
+        <div class="container-fluid d-flex">
+            <!-- Links brand-->
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./img/header-logo2.svg" alt="" width="120"></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Links main link-->
+
+            <div>
+                <ul class="navbar-nav main_ul">
+                    <li class="nav-item main_li">
+                        <a class="nav-link main_link" href="#">Home <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item main_li">
+                        <a class="nav-link  main_link" href="#"> Listing <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item main_li">
+                        <a class="nav-link  main_link" href="#">Property<i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item main_li">
+                        <a class="nav-link  main_link" href="#">Blog <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item main_li">
+                        <a class="nav-link  main_link" href="#">Pages <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="mobileShow" class="mobile_navbar">
+                <ul>
+                    <li onclick="navBarcross()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Listing</a></li>
+                    <li><a href="">Property</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li><a href="#"> <button type="button" class="btn ">Add Property</button></a></li>
+                </ul>
+            </div>
+            <!-- Links cart-->
+            <div>
+                <ul class="cart_ul">
+                    <li class="nav-item mobile_show">
+                        <a class=" nav-link cart_link " href="#"><i class="fa-regular dd fa-user"></i></a>
+                    </li>
+                    <li class="nav-item mobile_hide">
+                        <a class=" nav-link cart_link " href="#"><i class="fa-regular dd fa-user"></i> <span> Login /
+                                Register</span></a>
+                    </li>
+                    <li class="nav-item mobile_hide">
+                        <a class="nav-link  cart_link" href="#">
+                            <button type="button" class="btn  btn_nav">Add Property</button>
+                        </a>
+                    </li>
+
+                    <li class="nav-item mobile_nav" onclick="navBar()"></i>
+                        <a class="nav-link cart-ribbon cart_link" href="#"><i
+                                class="fa-solid fa-bars-staggered"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </nav>
+
+
+    <!-- hero area -->
+    <section id="hero_section">
+        <div class="container hero_responsive mt-5 pt-5">
+            <div class="row g-4">
+                <div class="col-xl-6 col-md-6">
+                    <div class="hero_left">
+                        <h2>Easy Way to Find a <br>
+                            Perfect Property</h2>
+                        <p>From as low as $10 per day with limited time offer discounts.</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="hero_right">
+                        <div class="hero_img">
+                            <img src="./img/element-10.png" alt="">
+                        </div>
+                        <img src="./img/element-9.png" alt="">
+                        <div class="welcome">Welcome</div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-bar pt-3">
+                <form action="/action_page.php" class="pb-5">
+                    <input class="form-control search_class mt-3" type="text" placeholder="Search.." name="search">
+                    <button type="submit" class="btn search_btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="apartment_section pb-3">
+                <a href="#">
+                    <div class="house1">
+                        <div class="house"><i class="fa-solid fa-house"></i></div>
+                        <p>Houses</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="apartment1">
+                        <div class="apartment"><i class="fa-solid fa-building"></i></div>
+                        <p>Apartments</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="office1">
+                        <div class="office"><i class="fa-solid fa-building"></i></div>
+                        <p>Office</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="villa1">
+                        <div class="villa"><i class="fa-solid fa-building"></i></div>
+                        <p>Villa</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- demo section categoeries -->
+    <section>
+        <div class="container mt-5 pt-5">
+            <div class="row g-4">
+                <div class="col-xl-8 col-md-8">
+                    <div class="property_heading">
+                        <h2>Properties by Cities</h2>
+                        <p>Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="property_link">
+                        <a href="#">See All Cities <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="categoeries_demo pt-3">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr1.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>Los Angeles</h4>
+                                <p>12 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr2.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>California</h4>
+                                <p>08 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr3.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>America</h4>
+                                <p>10 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr4.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>Chicago</h4>
+                                <p>15 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr5.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>Italy</h4>
+                                <p>18 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="property_box">
+                                <div class="property_box_img">
+                                    <img src="./img/pr6.png" alt="" class="img-fluid rounded">
+                                </div>
+                                <h4>France</h4>
+                                <p>10 properties</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Discover Popular Properties -->
+
+    <section id="discoverProperty">
+        <div class="container mt-5 pt-5">
+            <div class="row g-4">
+                <div class="col-xl-6 col-md-6">
+                    <div class="discover_properties_left">
+                        <h2>Discover Popular Properties</h2>
+                        <p>Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="discover_properties_right">
+                        <button class="btn discoverbtn">House</button>
+                        <button class="btn discoverbtn">Apartments</button>
+                        <button class="btn discoverbtn">Office</button>
+                        <button class="btn discoverbtn">Villa</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 pt-5">
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-1.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Equestrian Family Home</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$14000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-2.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Luxury villa in Rego Park</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$82000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-3.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Affordable Green Villa House</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$63000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-4.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Northwest Office Space</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$14000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-5.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Equestrian Family Home</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$65000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <a href="#">
+                        <div class="discover_properties_box">
+                            <div class="discoer_img_body">
+                                <img class="image" src="./img/md-6.jpg" alt="">
+                                <div class="middle">
+                                    <div class="text"><i class="fa-regular fa-heart"></i></div>
+                                    <div class="text2"><i class="fa-regular fa-clone"></i></div>
+                                    <div class="text3"><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+                                </div>
+                            </div>
+                            <div class="discover_box_inner">
+                                <div class="discover_inner_heading">
+                                    <h4>Sky Pool Villa House</h4>
+                                    <h5>California City, CA, USA</h5>
+                                </div>
+                                <button type="btn" class="btn discover_inner_btn">$52000</button>
+                            </div>
+                            <div class="discover_feature">Feature</div>
+                            <div class="for_sale">For sale</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Selling Option For You -->
+    <section id="selling_section">
+        <div class="container mt-5 pt-5">
+            <div class="row g-4">
+                <div class="col-xl-6 col-md-6">
+                    <div class="selling_left">
+                        <div class="selling_main">
+                            <h3>Let’s Find The Right <br>
+                                Selling Option For You</h3>
+                        </div>
+                        <div class="selling_box">
+                            <div class="selling_inner">
+                                <div class="slling_inner_block"><i class="fa-solid fa-list-check"></i></div>
+                                <div class="selling_content">
+                                    <h4>Property Management</h4>
+                                    <h5>Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="selling_inner pt-5">
+                                <div class="slling_inner_block"><i class="fa-brands fa-ups"></i></div>
+                                <div class="selling_content">
+                                    <h4>Mortgage Services</h4>
+                                    <h5>Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="selling_inner pt-5">
+                                <div class="slling_inner_block"><i class="fa-solid fa-sack-dollar"></i></div>
+                                <div class="selling_content">
+                                    <h4>Currency Services</h4>
+                                    <h5>Nullam sollicitudin blandit eros eu pretium. Nullam maximus ultricies auctor.
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selling_btn mt-5">
+                            <button type="button" class="btn selling_leran_btn">Learn more <i
+                                    class="fa-solid fa-arrow-up-right-from-square"></i> </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6">
+                    <div class="selling_right">
+                        <div class="selling_img_outer">
+                            <img src="./img/cta-side-bg-1.jpg" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="selling_perfomance  mt-5 pt-5">
+                <div class="selling_perfomane_block">
+                    <h1>400</h1>
+                    <p>Stores around the world</p>
+                </div>
+                <div class="selling_perfomane_block">
+                    <h1>200+</h1>
+                    <p>Stores around the world</p>
+                </div>
+                <div class="selling_perfomane_block">
+                    <h1>1K+</h1>
+                    <p>Stores around the world</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Explore Apartment Types -->
+    <section id="apartment_type">
+        <div class="container mt-5 pb-5 pt-5">
+            <div class="apartment_type_header">
+                <h3>Explore Apartment Types</h3>
+                <p>Get some Inspirations from 1800+ skills</p>
+            </div>
+            <div class="apartment_slider_box ">
+                <div class="owl-carousel apartment_box_sl owl-theme">
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-1.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>House</h4>
+                                    <p>22 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-2.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Apartments</h4>
+                                    <p>26 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-3.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Office</h4>
+                                    <p>24 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-4.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Villa</h4>
+                                    <p>12 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-5.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Townhome</h4>
+                                    <p>29 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-1.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>House</h4>
+                                    <p>22 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-2.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Apartments</h4>
+                                    <p>26 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-3.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Office</h4>
+                                    <p>24 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-4.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Villa</h4>
+                                    <p>12 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <div class="apartment_card_box">
+                                <div class="apartment_card_img">
+                                    <img src="./img/as-5.jpg" alt="">
+                                </div>
+                                <div class="apartment_inner_content pt-3">
+                                    <h4>Townhome</h4>
+                                    <p>29 properties</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Let’s find the right selling -->
+    <section id="right_agent">
+        <div class="container mt-5 pt-5">
+            <div class="row g-4 pb-5">
+                <div class="col-xl-6 col-md-6">
+                    <div class="right_agent_left">
+                        <div class="right_agent_inner_box">
+
+                            <div class="agent_main_card">
+                                <div class="right_agent_inner_heading pb-4">
+                                    <h3><span>200+</span> Exclusive Agents</h3>
+                                </div>
+                                <div class="agent_inner_cardbox">
+                                    <div class="agent_outer_img">
+                                        <img src="./img/ea-1.png" alt="">
+                                    </div>
+                                    <div class="agent_outer_content">
+                                        <h5>Marvin McKinney</h5>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div class="agent_inner_cardbox">
+                                    <div class="agent_outer_img">
+                                        <img src="./img/ea-2.png" alt="">
+                                    </div>
+                                    <div class="agent_outer_content">
+                                        <h5> Ralph Edwards</h5>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div class="agent_inner_cardbox">
+                                    <div class="agent_outer_img">
+                                        <img src="./img/ea-3.png" alt="">
+                                    </div>
+                                    <div class="agent_outer_content">
+                                        <h5>Annette Black</h5>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                                <div class="agent_inner_cardbox">
+                                    <div class="agent_outer_img">
+                                        <img src="./img/ea-4.png" alt="">
+                                    </div>
+                                    <div class="agent_outer_content">
+                                        <h5>Jane Cooper</h5>
+                                        <p>Designer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agent_profile">
+                                <div class="agent_profile_box">
+                                    <div class="agent_p_img">
+                                        <img src="./img/agent-5.jpg" alt="">
+                                    </div>
+                                    <h5 class="pt-4">Marvin McKinney</h5>
+                                    <p>Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col md-6">
+                    <div class="agent_right">
+                        <div class="agent_right_heading">
+                            <h3>
+                                Let’s find the right selling option for you</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt.</p>
+                        </div>
+                        <div class="agent_content_block pt-5">
+                            <div class="agent_block1"><i class="fa-regular fa-circle-check"></i></div>
+                            <h5>Find excellent deals</h5>
+                        </div>
+                        <div class="agent_content_block pt-3">
+                            <div class="agent_block1"><i class="fa-regular fa-circle-check"></i></div>
+                            <h5>Friendly host & Fast support</h5>
+                        </div>
+                        <div class="agent_content_block pt-3 pb-5">
+                            <div class="agent_block1"><i class="fa-regular fa-circle-check"></i></div>
+                            <h5>List your own property</h5>
+                        </div>
+                        <button type="button" class="btn agent_right_btn">See More <i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- People Love Living with Realton -->
+    <section id="testimonial">
+        <div class="container mt-5 pt-5">
+            <div class="testimonial_heading">
+                <h3>People Love Living with Realton</h3>
+                <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <div class="testimonial_slide_box pt-5">
+                <div class="owl-carousel testimonial owl-theme">
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-1.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-2.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-3.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-1.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-2.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimonial_body">
+                            <h4>Great Work</h4>
+                            <h5>" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum distinctio
+                                aperiam animi officia tempore excepturi non, deleniti magnam est ab at dignissimos. "
+                            </h5>
+                            <div class="star">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="testimonials_user pt-4">
+                                <img src="./img/testimonial-3.png" alt="">
+                                <div class="user_content">
+                                    <h4>Dianne Russell</h4>
+                                    <p>Facebook</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted by the world’s best -->
+    <section id="promote_brand">
+        <div class="container mt-5">
+            <div class="trusted_brand_heading">
+                <h2></h2>
+            </div>
+            <div class="trusted_brand_show">
+                <div class="owl-carousel brands_promote owl-theme">
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="brand_box">
+                            <img src="./img/6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- From Our Blog -->
+
+    <section id="blog_section">
+        <div class="container mt-5 pb-5 pt-5">
+            <div class="blog_heading">
+                <h2>From Our Blog</h2>
+                <p>Aliquam lacinia diam quis lacus euismod</p>
+            </div>
+            <div class="row g-4 pt-5">
+                <div class="col-xl-4 col-md-4">
+                    <div class="blog_body">
+                        <div class="blog_img">
+                            <img src="./img/blog-1.jpg" alt="" class="img-fluid">
+                        </div>
+                        <a href="#">
+                            <p>Living Room</p>
+                            <h4>Private Contemporary Home Balancing Openness</h4>
+                        </a>
+                        <div class="date_published">
+                            <div class="date_content">
+                                <p>July</p>
+                                <h5>11</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="blog_body">
+                        <div class="blog_img">
+                            <img src="./img/blog-2.jpg" alt="" class="img-fluid">
+                        </div>
+                        <a href="#">
+                            <p>Living Room</p>
+                            <h4>Private Contemporary Home Balancing Openness</h4>
+                        </a>
+                        <div class="date_published">
+                            <div class="date_content">
+                                <p>July</p>
+                                <h5>18</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="blog_body">
+                        <div class="blog_img">
+                            <img src="./img/blog-3.jpg" alt="" class="img-fluid">
+                        </div>
+                        <a href="#">
+                            <p>Living Room</p>
+                            <h4>Private Contemporary Home Balancing Openness</h4>
+                        </a>
+                        <div class="date_published">
+                            <div class="date_content">
+                                <p>July</p>
+                                <h5>28</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- footer page start -->
+
+<footer id="footer_id">
+    <div class="conatiner-fluid  pt-5">
+        <div class="row footer_row pb-2 g-4">
+            <div class="col-xl-3 col-md-3">
+                <div class="footer_description">
+                    <div class="footer_logo">
+                      <a href="#"><img src="./img/header-logo2.svg" alt="" width="150"></a>
+                    </div>
+                    <h5 class="pt-4">Address: 329 Queensberry Street, North Melbourne VIC 3051, Australia.</h5>
+                    <h5>Email: <span>zahidhasan800972@gmail.com</span></h5>
+                    <h5>Phone: <span>(+880) 1797839367</span></h5>
+                    <a href="#">Get direction</a>
+                    <div class="footer_social_bar pt-3">
+                        <div class="facebook-f">
+                           <a href="#"> <i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="twitter-f">
+                          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                        <div class="instagram-f">
+                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="tiktok-f">
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3">
+                <div class="help_link">
+                   <h4 class="pb-4">Popular Search</h4>
+                   <a href="#">Apartment for Rent</a>
+                   <a href="#">Apartment Low to hide</a>
+                   <a href="#">Offices for Buy</a>
+                   <a href="#">Offices for Rent</a>
+                </div>
+                <div class="help_link pt-3">
+                    <h4 class="pb-4">Discover</h4>
+                    <a href="#">Miami</a>
+                    <a href="#">Los Angeles</a>
+                    <a href="#">Chicago</a>
+                    <a href="#">New York</a>
+                 </div>
+            </div>
+            <div class="col-xl-3 col-md-3">
+                <div class="about_us_link">
+                   <h4 class="pb-4">Quick Links</h4>
+                   <a href="#">Terms of Use</a>
+                   <a href="#">Privacy Policy</a>
+                   <a href="#">Pricing Plans</a>
+                   <a href="#">Our Services</a>
+                   <a href="#">Contact Support</a>
+                   <a href="#">Careers/a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3">
+                <div class="subscribe_form">
+                    <form action="action_page.php">
+                        <div class="subcribe_form_box">
+                          <h2>Keep Yourself Up to Date</h2>
+                        </div>
+                        <div class="subcribe_form_box" style="background-color:white">
+                          <input type="text" placeholder="Email address" name="mail" required>
+                        </div>
+                      
+                        <div class="subcribe_form_box">
+                          <input type="submit" value="Subscribe">
+                        </div>
+                      </form>
+                </div>
+                <div class="google_play_app pb-3 pt-5">
+                    <h4>Apps</h4>
+                    <button type="button" class="btn apple_apps">
+                        <div class="btn_apple">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <div class="apps_content">
+                            <h5>Download on the</h5>
+                        <h4>Apple Store</h4>
+                        </div>
+                    </button>
+                    <button type="button" class="btn apple_apps mt-4">
+                        <div class="btn_apple">
+                            <i class="fa-brands fa-google-play"></i>
+                        </div>
+                        <div class="apps_content">
+                            <h5>Get It On</h5>
+                        <h4>Google Play</h4>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 pt-3">
+            <div class="col-xl-7  col-md-7">
+                <div class="copyright">
+                    <p>© 2024 Zahid . All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/main.js"></script>
+    <!-- jquery.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--owl.carousel.min.js  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        $('.brands_promote').owlCarousel({
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 2,
+                    // nav:true
+                },
+                600: {
+                    items: 3,
+                    // nav:false
+                },
+                1000: {
+                    items: 4,
+                    // nav:true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+
+    <script>
+        $('.testimonial').owlCarousel({
+            loop: true,
+            margin: 30,
+            responsiveClass: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    // nav:true
+                },
+                600: {
+                    items: 2,
+                    // nav:false
+                },
+                1000: {
+                    items: 3,
+                    // nav:true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+
+    <script>
+        $('.apartment_box_sl').owlCarousel({
+            loop: true,
+            margin: 20,
+            responsiveClass: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    // nav:true
+                },
+                600: {
+                    items: 3,
+                    // nav:false
+                },
+                1000: {
+                    items: 4,
+                    // nav:true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 20,
+            responsiveClass: true,
+            autoplay: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    // nav:true
+                },
+                600: {
+                    items: 3,
+                    // nav:false
+                },
+                1000: {
+                    items: 5,
+                    // nav:true,
+                    loop: false
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
